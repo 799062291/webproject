@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+      <link rel="stylesheet" type="text/css" href="/web-project/admin/easyui/themes/default/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="/web-project/admin/easyui/themes/icon.css" />
+		<script src="/web-project/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/web-project/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/web-project/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+	  <script type="text/javascript" src="/web-project/admin/js/list.js"></script> 
+</head>
+<body>
+  商品列表
+  <hr size="0"/>
+  <!-- combobox支持动态绑定数据   -->
+  <input id="cate" name="cate"/>
+ 
+  <p /> 
+  <table id="tb"></table>
+<div  id="div1" class="easyui-dialog" 
+ data-options="closed:true">
+		<form action="" id="f1" enctype="multipart/form-data">
+		<table style="width:250px;margin:25px auto">
+		<tr>
+		<td style="padding:5px">商品名称:<input class="easyui-textbox" type="text" id="gtitle" name="gtitle"  data-options="required:true,missingMessage:'请输入商品名称',prompt:'请输入商品名称'"  /></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者:<input class="easyui-textbox" type="text" id="gauthor" name="gauthor" data-options="required:true,missingMessage:'请输入作者名',prompt:'请输入作者'"/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;售价:<input class="easyui-textbox " type="text" id="gsaleprice" name="gsaleprice" validType="checkNum" data-options="required:true,missingMessage:'请输入售价',prompt:'请输入售价'" />￥</td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进价:<input class="easyui-textbox  " type="text" id="ginprice" name="ginprice" validType="checkNum" data-options="required:true,missingMessage:'请输入进价',prompt:'请输入进价'"/>￥</td>
+	    </tr>
+	    <tr>   
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;简介:<input class="easyui-textbox" type="text" id="gdesc" name="gdesc" data-options="required:true,missingMessage:'请输入简介',prompt:'请输入简介'"/></td>
+	    </tr>
+	     <tr>
+	    <td style="padding:5px">封面图片:<input class="easyui-filebox" type="text" id="gimg" name="gimg"   buttonText="上传图片" data-options="required:true,missingMessage:'请选择路径',prompt:'请选择路径'"/>
+	    </tr>
+	     <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;点击量:<input class="easyui-textbox" type="text" id="gclick" name="gclick" validType="xiaoshu" data-options="required:true,missingMessage:'请输入点击量',prompt:'请输入点击量'"/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">类别编号:<input class="easyui-textbox" type="text" id="cid" name="cid"  data-options="required:true,missingMessage:'请输入类别编号',prompt:'请输入类别编号'" /></td>
+	    </tr>
+	     <tr>
+	    <td style="padding:5px">出版编号:<input class="easyui-textbox " type="text" id="pid" name="pid"  data-options="required:true,missingMessage:'请输入出版编号',prompt:'请输入出版编号'" /></td>
+	    </tr> 
+
+	   </table>
+		</form>
+		</div>
+		<div id="div2" class="easyui-dialog"  data-options="closed:true">
+		 
+		       <form  id="ff" action="/web-project/UpServlet.do" method="post" enctype="multipart/form-data">
+		       <table style="width:350px;margin:25px auto">
+		      <tr>
+		<td style="padding:5px">商品编号:<input class="easyui-textbox " type="text" id="gid1" name="gid1" data-options="required:true,missingMessage:'请输入商品编号',prompt:'请输入编号'"  /></td>
+	    </tr>
+		       <tr>
+		<td style="padding:5px">商品名称:<input type="text"  class="easyui-textbox " id="gtitle1" name="gtitle1"  data-options="required:true,missingMessage:'请输入商品名称',prompt:'请输入商品名称'"  /></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作者:<input  class="easyui-textbox " type="text" id="gauthor1" name="gauthor1" data-options="required:true,missingMessage:'请输入作者名',prompt:'请输入作者'"/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;售价:<input  class="easyui-textbox " class="easyui-textbox " type="text" id="gsaleprice1" name="gsaleprice1" validType="checkNum" data-options="required:true,missingMessage:'请输入售价',prompt:'请输入售价'" />￥</td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;进价:<input  class="easyui-textbox "  type="text" id="ginprice1" name="ginprice1" validType="checkNum" data-options="required:true,missingMessage:'请输入进价',prompt:'请输入进价'"/>￥</td>
+	    </tr>
+	    <tr>   
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;简介:<input  class="easyui-textbox " type="text" id="gdesc1" name="gdesc1" data-options="required:true,missingMessage:'请输入简介',prompt:'请输入简介'"/></td>
+	    </tr>
+	     <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;点击量:<input  class="easyui-textbox " type="text" id="gclick1" name="gclick1" validType="xiaoshu" data-options="required:true,missingMessage:'请输入点击量',prompt:'请输入点击量'"/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">类别编号:<input class="easyui-textbox" type="text" id="cid1" name="cid1"  data-options="required:true,missingMessage:'请输入类别编号',prompt:'请输入类别编号'" /></td>
+	    </tr>
+	     <tr>
+	    <td style="padding:5px">出版编号:<input class="easyui-textbox " type="text" id="pid1" name="pid1"  data-options="required:true,missingMessage:'请输入出版编号',prompt:'请输入出版编号'" /></td>
+	    </tr> 
+		          
+		          <tr><td>
+		            <input type="file" id="filename" name="filename">&nbsp;&nbsp;&nbsp;
+                    <input type="submit"  class="easyui-linkbutton" data-options="iconCls:'icon-search'" id="sub" value="保存设置">
+		          </td></tr>
+		       </table>
+        
+          </form>
+		   
+		</div>
+		<!-- 窗口预览显示图片 -->
+		<datalist id="ds"><option value="!!!"/><option value="yoyoyo"/></datalist>
+		<div id="dahuikuimg">   
+		<img id="simg" src=""/>
+		</div>  
+</body>
+</html>

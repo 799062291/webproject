@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>eShop后端主程序登录</title>
+        <link rel="stylesheet" type="text/css" href="/web-project/admin/easyui/themes/default/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="/web-project/admin/easyui/themes/icon.css" />
+		<script src="/web-project/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/web-project/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/web-project/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="/web-project/admin/js/login.js"></script>
+        <style type="text/css">
+             table{width:250px;margin:25px auto }
+             table td{padding:5px}
+        </style>
+</head>
+<body>
+     <div id="login">
+        <form action="" method="post" id="f1" name="f1">
+         <table>
+            <tr>
+               <td>账号：</td>
+               <td><input type="text" class="easyui-textbox easyui-validatebox" id="uloginid" name="uloginid" data-options="required:true,missingMessage:'请输入账号',prompt:'请输入账号'"></td>
+            </tr>
+            <tr>
+               <td>密码：</td>
+               <td><input type="password" class="easyui-textbox easyui-validatebox" id="upassword" name="upassword" data-options="required:true,missingMessage:'请输入密码',prompt:'请输入密码'"></td>
+            </tr>
+         </table>
+         </form>
+     </div>
+</body>
+</html>

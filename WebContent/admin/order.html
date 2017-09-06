@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+  <link rel="stylesheet" type="text/css" href="/web-project/admin/easyui/themes/default/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="/web-project/admin/easyui/themes/icon.css" />
+		<script src="/web-project/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/web-project/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/web-project/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="/web-project/admin/easyui/datagrid-detailview.js" type="text/javascript" charset="utf-8"></script>
+	  <script type="text/javascript" src="/web-project/admin/js/order.js"></script> 
+
+</head>
+<body>
+   商品订单
+  <hr size="0"/>
+  <table id="tb"></table>
+  <div  id="div1" class="easyui-dialog" 
+ data-options="closed:true">
+		<form action="" id="f1">
+		<table style="width:250px;margin:25px auto">
+		<tr>
+		<td style="padding:5px">&nbsp;&nbsp;&nbsp;所有者: <input id="cate" name="cate" editable="false"/> </td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">商品总价:<input class="easyui-textbox" type="text" id="totalprice" name="totalprice"  validType="checkNum" data-options="required:true,missingMessage:'请输入总价',prompt:'请输入总价'"/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">订单日期:<input class="easyui-datebox " type="text" id="orderdate" editable="false" name="orderdate" data-options="required:true,missingMessage:'请选择日期',prompt:'请选择日期'" /></td>
+	    </tr>
+	      
+	   
+	   </table>
+		</form>
+		</div>
+	   <!----------------------------添加商品面板-------------------------------------------------------------------------  -->
+	    <div  id="div2" class="easyui-dialog" 
+ data-options="closed:true">
+		<form action="" id="f2">
+		<table style="width:250px;margin:25px auto">
+		<tr>
+		<td style="padding:5px">订单编号: <input id="orderid" name="orderid" editable="false"/> </td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">商品名称:<input class="easyui-textbox" type="text" id="gname" name="gname"   data-options="required:true,missingMessage:'请输入名称',prompt:'请输入名称'"/></td>
+	    </tr>
+	     <tr>
+	    <td style="padding:5px">商品单价:<input class="easyui-textbox" type="text" id="gsaleprice" name="gsaleprice" validType="checkNum"  validType="checkNum" data-options="required:true,missingMessage:'请输入单价',prompt:'请输入单价'"/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">商品数量:<input class="easyui-textbox " type="text" id="gnumber" validType="xiaoshu"  name="gnumber" data-options="required:true,missingMessage:'请输入数量',prompt:'请输入数量'" /></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">类别编号:<input class="easyui-textbox " type="text" id="gid"  name="gid" data-options="required:true,missingMessage:'请输入编号',prompt:'请输入编号'" /></td>
+	    </tr> 
+	   
+	   </table>
+		</form>
+		</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/web-project/admin/easyui/themes/default/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="/web-project/admin/easyui/themes/icon.css" />
+		<script src="/web-project/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/web-project/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/web-project/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+	  <script type="text/javascript" src="/web-project/admin/js/um.js"></script> 
+	 
+	</head>
+	<body>
+		用户管理
+		<hr size="0"/>
+		<table id="tab"></table>
+		<div  id="div1" >
+		<form action="" id="f1">
+		<table style="width:250px;margin:25px auto">
+		<tr>
+		<td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编号:<input class="easyui-textbox easyui-textbox " type="text" id="userid" name="userid" value="" data-options="disabled:true" /><font color="red">*不可改</font></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱:<input class="easyui-textbox easyui-textbox " type="text" id="uemail" name="uemail" value="" data-options="disabled:true" /><font color="red">*不可改</font></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;账户名:<input class="easyui-textbox easyui-textbox " type="text" id="uname" name="uname" data-options="required:true,missingMessage:'请输入账号名',prompt:'请输入账号名'" value=""/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码:<input class="easyui-textbox easyui-textbox " type="text" id="upassword" name="upassword" data-options="required:true,missingMessage:'请输入密码',prompt:'请输入密码'" value=""/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">联系地址:<input class="easyui-textbox easyui-textbox " type="text" id="uaddress" name="uaddress" data-options="required:true,missingMessage:'请输入地址',prompt:'请输入地址'" value=""/></td>
+	    </tr>
+	     <tr>
+	    <td style="padding:5px">联系电话:<input class="easyui-textbox easyui-textbox " type="text" id="utel" name="utel" data-options="required:true,missingMessage:'请输入电话',prompt:'请输入电话'" value=""/></td>
+	    </tr>    
+	    <tr>
+    
+    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别：<input type="radio" id="usex1" name="usex" value="男" />
+      男
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="usex2" name="usex" value="女" />
+      女</td>
+    </tr>
+     <tr>
+    
+    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态：<input type="radio" id="ustateid1" name="ustateid" value="B5868B7A06E54DAEB19658343D3A2B28" />
+      可用
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="ustateid2" name="ustateid" value="36D0F394FC6A45829385E0BE11208263" />
+     冻结</td>
+    </tr>
+     <tr>
+    
+    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;角色：<input type="radio" id="uroleid1" name="uroleid" value="2" />
+      用户
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="uroleid2" name="uroleid" value="1" />
+     管理员</td>
+    </tr>
+	   </table>
+		</form>
+		</div>
+	<!-- -------------------------------------添加-----------------------------------------------------------------                         -->	
+		<div  id="div2" >
+		<form action="" id="f2">
+		<table style="width:250px;margin:25px auto">
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱:<input class="easyui-textbox easyui-textbox " type="text" id="uemail1" name="uemail1" value="" data-options="required:true,missingMessage:'请输入邮箱',prompt:'请输入邮箱'" /></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;账户名:<input class="easyui-textbox easyui-textbox " type="text" id="uname1" name="uname1" data-options="required:true,missingMessage:'请输入账号名',prompt:'请输入账号名'" value=""/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码:<input class="easyui-textbox easyui-textbox " type="text" id="upassword1" name="upassword1" data-options="required:true,missingMessage:'请输入密码',prompt:'请输入密码'" value=""/></td>
+	    </tr>
+	    <tr>
+	    <td style="padding:5px">联系地址:<input class="easyui-textbox easyui-textbox " type="text" id="uaddress1" name="uaddress1" data-options="required:true,missingMessage:'请输入地址',prompt:'请输入地址'" value=""/></td>
+	    </tr>
+	     <tr>
+	    <td style="padding:5px">联系电话:<input class="easyui-textbox easyui-textbox " type="text" id="utel1" name="utel1" data-options="required:true,missingMessage:'请输入电话',prompt:'请输入电话'" value=""/></td>
+	    </tr>    
+	    <tr>
+    
+    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别：<input type="radio"  name="usex1" value="男" />
+      男
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="usex1" value="女" />
+      女</td>
+    </tr>
+     <tr>
+    
+    <td style="padding:5px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态：<input type="radio" name="ustateid1" value="B5868B7A06E54DAEB19658343D3A2B28" />
+      可用
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="ustateid1" value="36D0F394FC6A45829385E0BE11208263" />
+     冻结</td>
+    </tr>
+	   </table>
+		</form>
+		</div>
+	</body>
+</html>
